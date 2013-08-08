@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>AACN Home</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="css/bootstrap/2.3.1-grid-only/bootstrap.css" /> 
+        <link rel="stylesheet" href="js/jquery-mobile/1.2.1/jquery.mobile-1.2.1.css"/>
+        <link rel="stylesheet" href="css/themes/AACN_greenGrey.css" />
+        <link rel="stylesheet" href="css/pocket-card-detail.css"/>
+        <link rel="stylesheet" href="css/site.css"/>
+        <style>
+            #purchase {
+                position: absolute;
+                bottom: 5px;
+            }
+            table {
+                border-collapse: collapse;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            th {
+                text-align: left;
+            }
+            td{
+                border: 3px solid #808080;
+            }
+            .left{
+                border-left: 0;
+                border-right: 0;
+            }
+            .right {
+                border-right: 0;
+            }
+            .image {
+                display: block;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        </style> 
+        <script src="js/headjs/0.99/head.min-0.99.js"></script>
+        <script src="js/head-common.js"></script>
+
+        <script>
+            head.ready(function() {
+                var querystringHash = Utils.getQuerystringHash();
+                var jsonFile = "json/card_data/" + querystringHash["json"] + ".json";
+                //var jsonFile = "json/generated/card_data/" + querystringHash["json"] + ".json";
+                var unlocked = querystringHash["unlocked"];
+
+                $("#commonTemplates").load("common-templates.html", function() {
+                    getJSON();
+                });
+
+                function getJSON() {
+                    $.getJSON(jsonFile, function(json) {
+                        buildTemplates(json);
+                        $.mobile.initializePage();
+                        $(".panzoom").panzoom({
+                            minScale: 1,
+                            maxScale: 3,
+                            increment: 1,
+                            $zoomIn: $(".zoomin"),
+                            $zoomOut: $(".zoomout"),
+                            $reset: $(".resetbtn")
+                        });
+                        $(document).on("panzoomed", ".panzoom", function(e){
+                            e.preventDefault();
+                        });
+                        /*
+                           For the elements that get hidden/shown for controlGroup button screens,
+                           make the first element the default (i.e. visible)
+                        */
+                        $(".hidable").each(function(i, element) {
+                            if ($(element).index() == 2) {  // Why 2?  Not sure.  Works.
+                                $(element).show();
+                            } else {
+                                $(element).hide();
+                            }
+                        });
+
+                        registerHandlers();
+                        /*
+                           Makes local variables in jsrender templates possible
+                        */
+                        var vars = {};
+
+                        $.views.tags({
+                            setvar: function(key, value) {
+                                vars[key] = value;
+                            }
+                        });
+
+                        $.views.helpers({
+                            getvar: function(key) {
+                                return vars[key];
+                            }
+                        });
+                    });
+                }
+
+                function buildTemplates(json) {
+                    TemplateHelper.injectIndexes(json);
+
+                    /*
+                        Render templates.
+                    */
+                    if (unlocked == "false") {
+                        $("body").append($("#lockedCard").render(json));
+                    } else {
+                        TemplateHelper.processTemplates(json, 0);
+                    }
+                }
+
+                function registerHandlers() {
+                    // $(window).trigger("hashchange");
+                    $("#purchase").click(function() {
+                        $.mobile.loading("show");
+                        var productId = $(this).data("productid");
+                        var title = $(this).data("title");
+                        forge.payments.purchaseProduct(productId, 
+                            function() {
+                                $.mobile.loading("hide");
+                                location.href = "confirmation.html?productId=" + productId + "&title=" + encodeURIComponent(title);
+                            },
+                            function(error) {
+                                $.mobile.loading("hide");
+                                alert(error.message);
+                            }
+                        );
+                    });
+                    $(".controlgroup").click(function() {
+                        var that = $(this);
+                        var idxToShow = that.index();
+                        that.parent().parent().find(".hidable").each(function(i, element) {
+                            if (i == idxToShow) {
+                                $(element).show();
+                            } else {
+                                $(element).hide();
+                            }
+                        });
+                            
+                    });
+
+                }
+//                $(document).on ("ready", function (){
+//                    $(document).keydown(function(e){
+//                        if (e.keyCode == 38){
+//                            $(".panzoom").panzoom("zoom");
+//                        }
+//                        if (e.keyCode == 40){
+//                            $(".panzoom").panzoom("zoom", true);
+//                        }
+//                    });
+//                    $(document).on("click", ".panzoom", function(){
+//                        $(this).panzoom("zoom");
+//                    });
+//                });
+
+            });    // end of head.ready();
+            
+            
+        </script>
+    </head>
+    <body>
+        <div id="commonTemplates"></div>
+        <script id="lockedCard" type="text/x-jsrender">
+            <div data-role="page" id="{{>idx}}" >
+                {{for tmpl="#headerTemplate"}}{{/for}}
+                <div data-role="content" >
+                    {{for meta.preview.sections}}
+                        <p>{{:title}}</p>
+                        <ul>
+                            {{for lineitems}}
+                                <li>{{:text}}</li>
+                            {{/for}}
+                        </ul>
+                    {{/for}}
+                    </ul>
+                    <a id="purchase" data-role="button" href="#" data-productid="{{>productId}}" data-title="{{:title}}">Purchase & Unlock ($4.99)</a>
+                </div>
+            </div>
+        </script>
+
+        <script id="accordion" type="text/x-jsrender">
+            <div data-role="page" id="{{>idx}}" >
+                {{for tmpl="#headerTemplate"}}{{/for}}
+                <div data-role="content" >
+                    <header><h1>{{:title}}</h1></header>
+                    <div data-role="collapsible-set">
+                        {{for sections}}
+                            <div data-role="collapsible" data-collapsed="true">
+                                <h3>{{:title}}</h3>
+                                <ol>
+                                {{for lineitems}}
+                                    <li>{{:text}}</li>
+                                {{/for}}
+                                </ol>
+                            </div>
+                        {{/for}}
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <script id="collapsibleImageWithBulletedList" type="text/x-jsrender">
+            <div data-role="page" id="{{>idx}}" >
+                {{for tmpl="#headerTemplate"}}{{/for}}
+                <div data-role="content" >
+                    <header><h1>{{:title}}</h1></header>
+                    <div data-role="collapsible-set">
+                        {{for sections}}
+                            <div data-role="collapsible" data-collapsed="true">
+                                <h3>{{:title}}</h3>
+                                <span>
+                                    <img class="image" src="img/dysrhythmiaImages/{{:image}}">
+                                </span>
+                            </div>
+                    </div>
+                        {{for sections}}
+                            <div>
+                               <h3>{{:title}}</h3>
+                               <ul>
+                                   {{for listitems}}
+                                       <li>
+                                         {{:text}}
+                                       </li>
+                                   {{/for}}
+                               </ul>
+                            </div>
+                        {{/for}}
+                    {{/for}}
+                </div>
+            </div>
+        </script>
+
+        <script id="template3" type="text/x-jsrender">
+            <div data-role="page" id="{{>idx}}" >
+                {{for tmpl="#headerTemplate"}}{{/for}}
+                <div data-role="content">
+                    <ol>
+                    {{for sections}}
+                        <ul>
+                            {{for lineitems}}
+                                <p>{{:text}}</p>
+                            {{/for}}
+                        </ul>
+                    {{/for}}
+                    </ol>
+                </div>
+            </div>
+        </script>
+        <script id="template4" type="text/x-jsrender">
+            <div data-role="page" id="{{>idx}}" >
+                {{for tmpl="#headerTemplate"}}{{/for}}
+                {{setvar "spansPerColumn" meta.spansPerColumn/}}
+                <div data-role="content">
+                    <div class="container-fluid">
+                        <div class="row-fluid">
+                            <div class="span{{:~getvar('spansPerColumn')}}">--</div>
+                            {{for table.columns}}
+                                <div class="span{{:~getvar('spansPerColumn')}}"><h3>{{:#data}}</h3></div>
+                            {{/for}}
+                        </div>
+                        {{for table.rows}}
+                            <div class="row-fluid" style="margin-bottom: 6px">
+                                {{if header}}
+                                    <h2 class="span12">{{:header}}</h2>
+                                {{else}}
+                                    <div class="span{{:~getvar('spansPerColumn')}}"><h4>{{:title}}</h4></div>
+                                    {{for values}}
+                                        <div class="span{{:~getvar('spansPerColumn')}}">{{:value}}</div>
+                                    {{/for}}
+                                {{/if}}
+                            </div>
+                        {{/for}}
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <script id="dyspneaRatingScaleTemplate" type="text/x-jsrender">
+            <div data-role="page" id="{{>idx}}" >
+                {{for tmpl="#headerTemplate"}}{{/for}}
+                <div data-role="content" >
+                    <p>{{:sections[0].lineitems[0].text}}</p>
+                    <div class="dyspneaRatingScale"></div>
+                </div>
+            </div>
+        </script>
+
+        <!-- New templates, 2013-04-16  -->
+        <script id="titledTwoColumnWithTitledBulletedListTemplate" type="text/x-jsrender">
+            <div data-role="page" id="{{>idx}}">
+                {{for tmpl="#headerTemplate"}}{{/for}}
+                <div data-role="content">
+                    {{if title}}
+                    <header><h1>{{:title}}</h1></header>
+                    {{/if}}
+                    {{for table}}
+                        <table>
+                            {{if headers}}
+                                <tr>
+                                    {{for headers}}
+                                        <th>{{:text}}</th>
+                                    {{/for}}
+                                 </tr>
+                            {{/if}}
+                            {{for rows}}
+                                <tr>
+                                    {{for cells}}
+                                        <td class="{{:class}}">
+                                            {{:text}}
+                                        </td>
+                                    {{/for}}
+                                </tr>
+                            {{/for}}
+                        </table>
+                    {{/for}}
+                    {{for sections}}
+                    {{if title}}
+                    <b>{{:title}}</b><br/>
+                    {{/if}}
+                    {{if caption}}
+                    <p>{{:caption}}</p>
+                    {{/if}}
+                    <ul>
+                        {{for lineitems}}
+                        <li>{{:text}}</li>
+                        {{/for}}
+                    </ul>
+                    {{/for}}
+                </div>
+            </div>
+            <br/>
+        </script>
+    </body>
+</html>

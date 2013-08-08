@@ -1,0 +1,525 @@
+<script id="headerTemplate" type="text/x-jsrender">
+    <div data-role="header" data-position="fixed" data-tap-toggle="false">
+        {{if meta && meta.type && meta.type == "practice alert"}}
+            <h2 class="titlebar">Practice Alert</h2>
+        {{else}}
+            <h2 class="titlebar">{{:card_title}}</h2>
+        {{/if}}
+        <a data-rel="back" data-icon="back" class="ui-btn-left" >Back</a>
+        <a href="home.html" rel="external" class="ui-btn-right" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+    </div>
+</script>
+
+<script id="titleTemplate" type="text/x-jsrender">
+    {{if title}}
+        {{if meta && meta.type && meta.type == "practice alert"}}
+            <header>
+                {{if title != card_title}}
+                    <h4>{{:card_title}}</h4>
+                {{/if}}
+                <h1>{{:title}}</h1>
+            </header>
+        {{else}}
+            <header><h1 class="titlebar">{{:title}}</h1></header>
+        {{/if}}
+    {{/if}}
+</script>
+
+
+<script id="sectionsTemplate" type="text/x-jsrender">
+    <div data-role="page" id="{{>idx}}" >
+        {{for tmpl="#headerTemplate"}}{{/for}}
+        <div data-role="content" >
+            {{if meta.type == "practice alert" || title != card_title}}
+                {{for tmpl="#titleTemplate"}}{{/for}}
+            {{/if}}
+            <ul data-role='listview' >                    
+            {{for sections}}
+                <li><a href="#{{>idx}}">{{:title}}</a></li>
+            {{/for}}
+            </ul>
+        </div>
+    </div>
+</script>
+
+<script id="sectionsWithImagesTemplate" type="text/x-jsrender">
+    <div data-role="page" id="{{>idx}}" >
+        {{for tmpl="#headerTemplate"}}{{/for}}
+        <div data-role="content" >
+            {{if meta.type == "practice alert" || title != card_title}}
+            {{for tmpl="#titleTemplate"}}{{/for}}
+            {{/if}}
+            <ul data-role='listview' >
+                {{for sections}}
+                <li>
+                    <a href="#{{>idx}}">{{:title}}
+                        {{if image}}
+                            <span>
+                                <img class="image" src="img/dysrhythmiaImages/{{:image}}">
+                            </span>
+                        {{/if}}
+                    </a>
+                </li>
+                {{/for}}
+            </ul>
+        </div>
+    </div>
+</script>
+
+<script id="titled_ul_with_caption" type="text/x-jsrender">
+    <div data-role="page" id="{{>idx}}">
+        {{for tmpl="#headerTemplate"}}{{/for}}
+        <div data-role="content">
+            {{if title}}
+                {{for tmpl="#titleTemplate"}}{{/for}}
+            {{/if}}
+            {{if caption}}
+                <p>{{:caption}}</p>
+            {{/if}}
+            {{for sections}}
+                {{if title}}
+                    <b>{{:title}}</b><br/>
+                {{/if}}
+                {{if caption}}
+                    <p>{{:caption}}</p>
+                {{/if}}
+                <ul>
+                    {{for lineitems}}
+                        <li>{{:text}}</li>
+                    {{/for}}
+                </ul>
+            {{/for}}
+        </div>
+    </div>
+</script>
+        
+<script id="dialog_common_template" type="text/x-jsrender">
+    <div data-role="dialog" id="{{>id}}">
+        <div data-role="header" data-position="fixed" data-tap-toggle="false">
+            <h2>{{:header}}</h2>
+        </div>
+        <div data-role="content">
+            <h3 class="ui-title">{{:title}}</h3>
+            <p>{{:content}}</p>
+            {{if external}}
+                <a href="{{>external.url}}" rel="external" data-role="button" data-inline="true" data-theme="c">{{:external.link_text}}</a>
+            {{else}}
+                <a data-rel="back" data-role="button" data-inline="true" data-theme="c">Ok</a>
+            {{/if}}
+       </div>
+    </div>
+</script>
+
+<script id="unknown_failure_dialog_common_template" type="text/x-jsrender">
+    <div data-role="dialog" id="{{>id}}" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:400px;" class="ui-corner-all">
+        <div data-role="header" data-theme="a" class="ui-corner-top">
+            <h1>{{:header}}</h1>
+        </div>
+        <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+            <h3 class="ui-title">{{:content}}</h3>
+            <p>Error <span id="errorCode"></span>: <span id="errorMsg"></span></p>
+            <a data-rel="back" data-role="button" data-inline="true" data-theme="c">Ok</a>
+        </div>
+    </div>
+</script>
+        
+<script id="invalid_email_common_template" type="text/x-jsrender">
+    <div data-role="dialog" id="{{>id}}">
+        <div data-role="header" data-position="fixed" data-tap-toggle="false">
+            <h2>Invalid Email Address</h2>
+        </div>
+        <div data-role="content">
+            <h3 class="ui-title">Check your email address</h3>
+            <p>That email address is incomplete.  Please enter your full email address.</p>
+            <a data-rel="back" data-role="button" data-inline="true" data-theme="c">Ok</a>
+       </div>
+    </div>
+</script>
+        
+<script id="invalid_password_common_template" type="text/x-jsrender">
+    <div data-role="dialog" id="{{>id}}">
+        <div data-role="header" data-position="fixed" data-tap-toggle="false">
+            <h2>Invalid Password</h2>
+        </div>
+        <div data-role="content">
+            <h3 class="ui-title">Check your password</h3>
+            <p>That password is invalid.  Passwords must consist of four or more non-blank characters.</p>
+            <a data-rel="back" data-role="button" data-inline="true" data-theme="c">Ok</a>
+       </div>
+    </div>
+</script>
+
+<script id="untitledParagraphs" type="text/x-jsrender">
+    <div data-role="page" id="{{>idx}}" >
+        {{for tmpl="#headerTemplate"}}{{/for}}
+        <div data-role="content" >
+            {{for tmpl="#titleTemplate"}}{{/for}}
+            {{for lineitems}} 
+                <p>{{:text}}</p>
+            {{/for}}
+        </div>
+    </div>
+</script>
+
+<script id="untitledNumberedList" type="text/x-jsrender">
+    <div data-role="page" id="{{>idx}}">
+        {{for tmpl="#headerTemplate"}}{{/for}}
+        <div data-role="content">
+            {{for tmpl="#titleTemplate"}}{{/for}}
+            <ol>
+                {{for lineitems}} 
+                   <li>{{:text}}</li>
+                {{/for}}
+            </ol>
+        </div>
+    </div>
+</script>
+
+<script id="accordionWithRecursiveItemsTemplate" type="text/x-jsrender">
+    <div data-role="page" id="{{>idx}}">
+        {{for tmpl="#headerTemplate"}}{{/for}}
+        <div data-role="content" >
+            {{for tmpl="#titleTemplate"}}{{/for}}
+            <div data-role="collapsible-set">
+                {{for sections}}
+                    <div data-role="collapsible" data-collapsed="true">
+                        <h3>{{:title}}</h3>
+                        <h4>{{:title}}</h4>
+                        <ul>
+                            {{for lineitems}} 
+                               <li>
+                                   {{:text}}
+                                   {{if lineitems}}
+                                       <ul>
+                                           {{for lineitems}}
+                                               <li>
+                                                   {{:text}}
+                                                   {{if lineitems}}
+                                                       <ul>
+                                                           {{for lineitems}}
+                                                               <li>{{:text}}</li>
+                                                           {{/for}}
+                                                       </ul>
+                                                   {{/if}}
+                                               </li>
+                                           {{/for}}
+                                       </ul>
+                                   {{/if}}
+                               </li>
+                            {{/for}}
+                        </ul>
+                    </div>
+                {{/for}}
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="recursiveItemsTemplate" type="text/x-jsrender">
+    <div data-role="page" id="{{>idx}}">
+        {{for tmpl="#headerTemplate"}}{{/for}}
+        <div data-role="content" >
+            {{for tmpl="#titleTemplate"}}{{/for}}
+            <ul>
+                {{for lineitems}}
+                    <li>{{:text}}</li>
+                    {{if lineitems}}
+                        <ul>
+                            {{for lineitems}}
+                                <li>{{:text}}</li>
+                                {{if lineitems}}
+                                    <ul>
+                                        {{for lineitems}}
+                                            <li>{{:text}}</li>
+                                        {{/for}}
+                                    </ul>
+                                {{/if}}
+                            {{/for}}
+                        </ul>
+                    {{/if}}
+                {{/for}}
+            </ul>
+        </div>
+    </div>
+</script>
+
+<script id="titled_bullets" type="text/x-jsrender">
+    <div data-role="page" id="{{>idx}}" >
+        {{for tmpl="#headerTemplate"}}{{/for}}
+        <div data-role="content" >
+            {{for tmpl="#titleTemplate"}}{{/for}}
+            {{if caption}}
+                {{for caption}} 
+                    <p>{{:text}}</p>
+                {{/for}}
+            {{/if}}
+            <ul>
+                {{for lineitems}} 
+                    <li><b>{{:title}}</b> - {{:text}}</li>
+                {{/for}}
+            </ul>
+        </div>
+    </div>
+</script>
+
+<script id="titled_numbers" type="text/x-jsrender">
+    <div data-role="page" id="{{>idx}}" >
+        {{for tmpl="#headerTemplate"}}{{/for}}
+        <div data-role="content" >
+            {{for tmpl="#titleTemplate"}}{{/for}}
+            {{if caption}}
+                {{for caption}} 
+                    <p>{{:text}}</p>
+                {{/for}}
+            {{/if}}
+            <ol>
+                {{for lineitems}} 
+                    <li><b>{{:title}}</b> - {{:text}}</li>
+                {{/for}}
+            </ol>
+        </div>
+    </div>
+</script>
+
+<script id="horizontalGroupedButtons" type="text/x-jsrender">
+    <div data-role="page" id="{{>idx}}" >
+        {{for tmpl="#headerTemplate"}}{{/for}}
+        <div data-role="content" >
+            {{for tmpl="#titleTemplate"}}{{/for}}
+            <div style="text-align: center" data-type="horizontal">
+                {{for sections}}
+                    <a class="controlgroup" data-inline="true" data-ajax="false" data-role="button">{{:title}}</a>
+                {{/for}}
+            </div>
+            {{for sections}}
+                <div class="hidable">
+                    <h3>{{:title}}</h3>
+                    {{for sections}}
+                        {{if title}}
+                            <b>{{:title}}</b>
+                        {{/if}}
+                        {{if caption}}
+                            <p>{{:caption}}</p>
+                        {{/if}}
+                        <ul>
+                            {{for lineitems}}
+                                <li>
+                                    {{if title}}
+                                        <b>{{:title}}</b> - 
+                                    {{/if}}
+                                    {{:text}}
+                                </li>
+                            {{/for}}
+                        </ul>
+                    {{/for}}
+                </div>
+            {{/for}}
+        </div>
+    </div>
+</script>
+
+<script id="titledParagraphs" type="text/x-jsrender">
+    <div data-role="page" id="{{>idx}}" >
+        {{for tmpl="#headerTemplate"}}{{/for}}
+        <div data-role="content" >
+            {{for tmpl="#titleTemplate"}}{{/for}}
+            {{for lineitems}}
+                <b>{{:title}}</b>
+                <p>{{:text}}<p>
+            {{/for}}
+        </div>
+    </div>
+</script>
+
+<script id="titledDefinitionList" type="text/x-jsrender">
+    <div data-role="page" id="{{>idx}}" >
+        {{for tmpl="#headerTemplate"}}{{/for}}
+        <div data-role="content" >
+            {{if alt_title}}
+                <header><h1>{{:alt_title}}</h1></header>
+            {{else}}
+                {{for tmpl="#titleTemplate"}}{{/for}}
+            {{/if}}
+            {{for sections}}
+                <h3>{{:title}}</h3>
+                {{for lineitems}}
+                    <p>
+                        {{if title}}
+                            <b>{{:title}}</b>
+                        {{/if}}
+                        {{if delimiter}}
+                            {{:delimiter}}
+                        {{/if}}
+                        {{:text}}
+                    </p>
+                {{/for}}
+            {{/for}}
+        </div>
+    </div>
+</script>
+
+<script id="horizontalGroupedButtons2" type="text/x-jsrender">
+    <div data-role="page" id="{{>idx}}" >
+        {{for tmpl="#headerTemplate"}}{{/for}}
+        <div data-role="content" >
+            {{for tmpl="#titleTemplate"}}{{/for}}
+            <div data-role="controlgroup" style="text-align: center" data-type="horizontal">
+                {{for sections}}
+                    <a class="controlgroup" data-inline="true" data-ajax="false" data-role="button">{{:title}}</a>
+                {{/for}}
+            </div>
+            {{for sections}}
+                <div class="hidable">
+                    <h2>{{:title}}</h2>
+                    {{for sections}}
+                        <h3>{{:title}}</h3>
+                        {{if caption}}
+                            <p>{{:caption}}</p>
+                        {{/if}}
+                        {{for lineitems}}
+                            <b>{{:title}}</b>: {{:text}}<br>
+                        {{/for}}
+                        <br>
+                    {{/for}}
+                </div>
+            {{/for}}
+        </div>
+    </div>
+</script>
+
+<script id="horizontalGroupedButtons3" type="text/x-jsrender">
+    <div data-role="page" id="{{>idx}}" >
+        {{for tmpl="#headerTemplate"}}{{/for}}
+        <div data-role="content" >
+            {{if title}}
+                {{for tmpl="#titleTemplate"}}{{/for}}
+            {{/if}}
+            <div style="text-align: center" data-type="horizontal">
+                {{for sections}}
+                    <a class="controlgroup" data-inline="true" data-ajax="false" data-role="button">{{:title}}</a>
+                {{/for}}
+            </div>
+            {{for sections}}
+                <div class="hidable">
+                    <h2>{{:title}}</h2>
+                    {{for sections}}
+                        <h3>{{:title}}</h3>
+                        {{for lineitems}}
+                            {{if title}}
+                                <h3>{{:title}}</h3>
+                            {{/if}}
+                            {{:text}}<br>
+                        {{/for}}
+                        <br>
+                    {{/for}}
+                </div>
+            {{/for}}
+        </div>
+    </div>
+</script>
+<script id="untitledBullets" type="text/x-jsrender">
+    <div data-role="page" id="{{>idx}}" >
+        {{for tmpl="#headerTemplate"}}{{/for}}
+        <div data-role="content" >
+            {{if title}}
+                {{for tmpl="#titleTemplate"}}{{/for}}
+            {{/if}}
+            {{for sections}}
+                <h3>{{:title}}</h3>
+                <ul>
+                    {{for lineitems}}
+                        <li>{{:text}}</li>
+                    {{/for}}
+                </ul>
+            {{/for}}
+        </div>
+    </div>
+</script>
+
+<script id="untitledBullets2" type="text/x-jsrender">
+    <div data-role="page" id="{{>idx}}" >
+        {{for tmpl="#headerTemplate"}}{{/for}}
+        <div data-role="content" >
+            {{if title}}
+                {{for tmpl="#titleTemplate"}}{{/for}}
+            {{/if}}
+            {{for sections}}
+                <h3>{{:title}}</h3>
+                {{for sections}}
+                    <h3>{{:title}}</h3>
+                    <ul>
+                        {{for lineitems}}
+                            <li>{{:text}}</li>
+                        {{/for}}
+                    </ul>
+                {{/for}}
+            {{/for}}
+        </div>
+    </div>
+</script>
+
+<script id="imagePanzoom" type="text/x-jsrender">
+    <div data-role="page" id="{{>idx}}" >
+        {{for tmpl="#headerTemplate"}}{{/for}}
+        <div data-role="content" >
+            <h2>{{:text}}</h2>
+            <div data-type="horizontal">
+                <a class="zoomin" data-inline="true" href="#" data-role="button"> Zoom In </a>
+                <a class="zoomout" data-inline="true" href="#" data-role="button"> Zoom Out </a>
+                <a class="resetbtn" data-inline="true" href="#" data-role="button"> Reset </a>
+            </div>
+            {{for sections}}
+            <div>
+                {{:image}}
+            </div>
+            {{/for}}
+        </div>
+    </div>
+</script>
+
+<script id="accordionWithHorizontalButtons" type="text/x-jsrender">
+    <div data-role="page" id="{{>idx}}" >
+        {{for tmpl="#headerTemplate"}}{{/for}}
+        <div data-type="horizontal" data-role="content" >
+            <header><h2>{{:title}}</h2></header>
+            <div data-role="collapsible-set">
+                {{for sections}}
+                    {{for lineitems}}
+                        <div data-role="collapsible" data-collapsed="true">
+                            <h3>{{:title}}</h3>
+                            <p>
+                                {{:text}}
+                            </p>
+                        </div>
+                {{/for}}
+            </div>
+                    <div data-role="controlgroup" data-type="horizontal">
+                        <div>
+                            {{for sections}}
+                                <a class="controlgroup" data-mini="true" data-inline="true" data-ajax="false" data-role="button">{{:title}}</a>
+                            {{/for}}
+                        </div>
+                    </div>
+                    {{for sections}}
+                        <div class="hidable">
+                            <h3>{{:title}}</h3>
+                            {{for sections}}
+                                {{if title}}
+                                    <b>{{:title}}</b>
+                                {{/if}}
+                                {{if caption}}
+                                    <p>{{:caption}}</p>
+                                {{/if}}
+                                {{for lineitems}}
+                                    <h2>{{:title}}</h2>
+                                    <p>{{:text}}</p>
+                                {{/for}}
+                            {{/for}}
+                        </div>
+                    {{/for}}
+                {{/for}}
+        </div>
+    </div>
+</script>
+
+

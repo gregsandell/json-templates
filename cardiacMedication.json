@@ -1,0 +1,1278 @@
+{
+  "title": "Cardiac Medication",
+  "productId": "cardiacMedication",
+  "meta": {
+    "name": {
+      "text": "Cardiac Medication"
+    },
+    "card_cover": {
+      "sections": [
+        {
+          "title": "",
+          "lineitems": [
+            {
+              "text": "CARDIAC MEDICATIONS"
+            },
+            {
+              "text": "CARDIAC MEDICATIONS Pocket Reference"
+            },
+            {
+              "text": "AMERICAN ASSOCIATI0N of CRITICAL-CARE NURSES"
+            }
+          ]
+        },
+        {
+          "title": "This pocket reference contains information about:",
+          "lineitems": [
+            {
+              "text": "AntidysrhythmicMedications"
+            },
+            {
+              "text": "InotropicandVasopressorMedications"
+            },
+            {
+              "text": "Ventilator settings"
+            },
+            {
+              "text": "VasodilatorMedications"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "lineitems": [
+            {
+              "text": "Prod #400801"
+            },
+            {
+              "text": "To order more cards call 1 (800) 899-AACN or visit www.aacn.org"
+            },
+            {
+              "text": "Copyright &copy;2009 American Association of Critical-Care Nurses REV 03/09"
+            }
+          ]
+        }
+      ]
+    },
+    "preview": {
+      "sections": [
+        {
+          "title": "",
+          "lineitems": [
+            {
+              "text": "This pocket reference card provides information on common cardiac medications, including loading and maintenance dosages, indications and contraindications. Quick reference drug categories: Antidysrhythmic Medications, Inotropic Drugs, Vasodilator Drugs."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "sections": [
+      {
+          "title": "Cardiac Medication",
+          "card_title": "Cardiac Medication",
+          "meta": {
+            "renderer": "sectionsTemplate"
+          },
+          "sections": [
+            {
+              "card_title": "Cardiac Medication",
+              "title": "Antidysrhythmic Medications",
+              "meta": {
+                "renderer": "sectionsTemplate",
+                "list_style": "number",
+                "fixed_columns": [
+                  "Indications",
+                  "Clinical Effects",
+                  "Side Effects",
+                  "Dose Range (Adult)",
+                  "Critical Care Considerations"
+                ]
+              },
+              "sections": [
+                {
+                  "title": "Adenosine (Adenocard) ",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Indications",
+                      "lineitems": [
+                        {
+                          "text": " PSVT, WPW. Not effective in AFib/Flutter or VT. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Clinical Effects",
+                      "lineitems": [
+                        {
+                          "text": "Slows SA node, shortens atrial ac- tion potential, slows heart rate, slows AV conduction. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": "Transient, flushing, dyspnea, hypotension "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Dose Range (Adult)",
+                      "lineitems": [
+                        {
+                          "text": "Initially give 6 mg IV over 1- 2 sec. If no response within 1-2 min give 12 mg rapid IV push: may repeat 12 mg dose in 1-2 min if still no response. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "Use port closest to insertion site. Follow with rapid bolus 0.9% NS flush."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Amiodarone (Cordarone) ",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Indications",
+                      "lineitems": [
+                        {
+                          "text": " Treatment and prophylaxis for unstable VT/VF. SVT "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Clinical Effects",
+                      "lineitems": [
+                        {
+                          "text": "Prolongs action potential, prolongs refractory period, decreases AV conduction. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": "Hypotension, abnormal liver function tests "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Dose Range (Adult)",
+                      "lineitems": [
+                        {
+                          "text": "Pulseless VT or VF: 300 mg IV push, 150 mg IV push if needed, follow with infusion of 1 mg/min. x 6 hrs. then 0.5 mg/min. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "Half life is 28 days. Use so- lutions held in PVC bags within 2 hrs. of dilution. Use solutions held in glass or polyolefin containers within 24 hrs. of dilution."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "card_title": "Cardiac Medication",
+                  "title": "Digoxin (Lanoxin) ",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Indications",
+                      "lineitems": [
+                        {
+                          "text": " AFib/Flutter, PSVT "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Clinical Effects",
+                      "lineitems": [
+                        {
+                          "text": "Increases force of myocardial contrac- tions. Decreases conduction through SA &amp; AV node. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": "Bradycardia, heart block. Toxicity: CNS &amp; GI symptoms "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Dose Range (Adult)",
+                      "lineitems": [
+                        {
+                          "text": "Loading dose: 0.25 mg IV Q6 hr x 24 (total 1.0 mg); then 0.125 - 0.375 mg IV Q 24 hrs. Inject over 3-5min. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "Monitor serum drug levels. Therapeutic serum level is 0.8-2 mg/ml. Toxic serum level is > 2 mg/ml."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Diltiazem (Cardizem, Cardizem CD, Cardizem LA, Cardizem SR, Cartia, Dilacor XR, Slitia XT, Taztia XT, Tiazec) ",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Indications",
+                      "lineitems": [
+                        {
+                          "text": " Angina, Hypertension, control of rapid ventricular rate in AFib/Flutter, rapid conversion of SVT to NSR "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Clinical Effects",
+                      "lineitems": [
+                        {
+                          "text": "SlowsAV conduction, shortens action potential."
+                        },
+                        {
+                          "text": "#Ca++ channel blocker"
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": "Bradycardia, hypotension, AV block "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Dose Range (Adult)",
+                      "lineitems": [
+                        {
+                          "text": "IV: 0.25 mg/kg/actual body weight, given over 2min. Infusionat 5-15 mg/hr for 24 hrs. Oral dose depends on type of preparation. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "Give PO before meals and at bedtime. Crush tablets as needed; do not crush or open sustained release capsules. IV solution is stable for 24 hrs. Continuous ECG tracing for duration of IV infusion. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Esmolol (Brevibloc) ",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Indications",
+                      "lineitems": [
+                        {
+                          "text": " ST, SVT, Intraoperative tachycardia or hypertension. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Clinical Effects",
+                      "lineitems": [
+                        {
+                          "text": "Slows sinus heart rate, decreases cardiac output, reduces BP."
+                        },
+                        {
+                          "text": "Cardioselective beta blocker."
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": "Hypotension, bradycardia, heart failure "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Dose Range (Adult)",
+                      "lineitems": [
+                        {
+                          "text": "Loading dose of 500 mcg/kg IV over 1 min., followed by an infusion of 50 mcg/kg/min. for 4 min.; repeat procedure every 5 min., increasing infusion by 25-50 mcg/kg/min to max of 200 mcg/kg/min."
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "V Infusion ONLY: give into a large vein. Avoid butterfly needles and very small veins. Do not administer by direct IV injection. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Ibutilide (Corvert) ",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Indications",
+                      "lineitems": [
+                        {
+                          "text": " Rapid conversion of AFib/Flutter that is of recent onset. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Clinical Effects",
+                      "lineitems": [
+                        {
+                          "text": "Mild slowing of sinus node rate and AV conduction; dose-related prolongation of QT interval. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": "Rare polymorphic VT "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Dose Range (Adult)",
+                      "lineitems": [
+                        {
+                          "text": "0.01-0.025 mg/kg infused over 10 min. (may repeatx1)OR1mg diluted in 50 ml infused over 10 min. (may repeat x1). "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "Have ACLS equipment and personnel on hand during and after adminis- tration. Compatible with D<sub>5</sub>W and 0.9% NS. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Lidocaine (Xylocaine) ",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Indications",
+                      "lineitems": [
+                        {
+                          "text": " PVC&#8217;s, VT, VF "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Clinical Effects",
+                      "lineitems": [
+                        {
+                          "text": "Decreases depolar- ization, automaticity, excitability of the ventricle during diastole. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": "CNS toxicity, nausea, vomiting with repeated doses "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Dose Range (Adult)",
+                      "lineitems": [
+                        {
+                          "text": "IV: 1-1.5 mg/kg over 2-3 min. May repeat doses of 0.5-0.75 mg/kg in 5-10 min. (max=3 mg/kg) Continuous infusion: 1-4 mg/min. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "May be administered via ET tube. Endotracheal dose is 2-2.5 times IV dose. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Procainamide (Pronestyl) ",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Indications",
+                      "lineitems": [
+                        {
+                          "text": " AFib, SVT, PVC&#8217;s, VT "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Clinical Effects",
+                      "lineitems": [
+                        {
+                          "text": "Increases stimula- tion threshold of the ventricles and HIS- Purkinje system. Decreases myocar- dial excitability and conduction velocity and depresses my- ocardial contractility. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": "Hypotension, GI effects, Widening of QRS and QT lengthening "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Dose Range (Adult)",
+                      "lineitems": [
+                        {
+                          "text": "Loading: 15 mg/kg in 50 ml D<sub>5</sub>W maximum infusion rate 25-50 mg/min. Maintenance infusion: 1-4 mg/min. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "Paradoxical, extremely rapid ventricular rate may occur during treatment of atrial fibrillation or flutter."
+                        },
+                        {
+                          "text": "Infusion may need to be reduced if QRS widens by 50% or PR interval exceeds 0.20 sec. or if BP drops rapidly."
+                        },
+                        {
+                          "text": "Lower degrees of heart block may progress to complete heart block. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Propranolol (Inderal) ",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Indications",
+                      "lineitems": [
+                        {
+                          "text": " SVT "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Clinical Effects",
+                      "lineitems": [
+                        {
+                          "text": "Slows sinus heart rate, decreases car- diac output, BP and myocardial ischemia severity. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": "Bradycardia, heart block, heart failure "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Dose Range (Adult)",
+                      "lineitems": [
+                        {
+                          "text": "1-3 mg IV every 5 min. not to exceed 0.1 mg/kg. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "Give undiluted for IV push at a rate not to exceed 1 mg/min. or dilute in 10 mL D<sub>5</sub>W and give 1 mg over 10-15 min."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Verapamil (Calan, Isoptin) ",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Indications",
+                      "lineitems": [
+                        {
+                          "text": " PSVT, AFib, AFlutter "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Clinical Effects",
+                      "lineitems": [
+                        {
+                          "text": "Slows SA &amp; AV conduction. Decreases total peripheral vascular resistance by vasodilation. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": "Hypotension, bradycardia, heart failure "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Dose Range (Adult)",
+                      "lineitems": [
+                        {
+                          "text": "5-10 mg IV, may repeat in 15-30 min. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "Use cautiously in patients who receive long-term beta blocker therapy. Avoid or use with caution in LV dysfunction. Use with extreme caution in patients with hypertrophic cardiomyopathy. "
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Inotropic and Vasopressor Medications",
+              "card_title": "Cardiac Medication",
+              "meta": {
+                "renderer": "sectionsTemplate",
+                "list_style": "number",
+                "fixed_columns": [
+                  "Dose",
+                  "Therapeutic Effects",
+                  "Side Effects",
+                  "Critical Care Considerations"
+                ]
+              },
+              "sections": [
+                {
+                  "title": "DOBUTamine (Dobutrex) ",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Dose",
+                      "lineitems": [
+                        {
+                          "text": "Mix:250mg/250mL D<sub>5</sub>W, D<sub>5</sub>NS, NS, LR = 1000 mcg/mL"
+                        },
+                        {
+                          "text": "2-10 mcg/kg/min. (up to 40 mcg/kg/min.)"
+                        },
+                        {
+                          "text": "Half life = 2min. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Therapeutic Effects",
+                      "lineitems": [
+                        {
+                          "text": "Decreases preload and afterload and enhances myocardial contractility, stroke volume, and cardiac output. Improvesrenal blood flow and urine output."
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": "Increased heart rate, increased blood pressure"
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "Dosage is determined by patient response to the drug. Titrate dosage to individual response."
+                        },
+                        {
+                          "text": "Correct hypovolemia before DOBUTamine infusion."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "DOPamine (Inotropin) ",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Dose",
+                      "lineitems": [
+                        {
+                          "text": "Mix:200mg/250mL D<sub>5</sub>W, D<sub>5</sub>NS, NS, LR = 800 mcg/mL."
+                        },
+                        {
+                          "text": "Half life = 2min."
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Therapeutic Effects",
+                      "lineitems": [
+                        {
+                          "text": "2-10mcg/kg/min - &#8593; contractility"
+                        },
+                        {
+                          "text": "10-20mcg/kg/min - &#8593; vasoconstriction "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": "Headache, ectopic beats, tachycardia, angina, vasoconstriction, hypotension "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "Dosage is determined by patient response to the drug. Titrate dosage to individual response."
+                        },
+                        {
+                          "text": "Correct hypovolemia before DOPamine infusion. Volume replacement may occur simultaneously with DOPamine infusion. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Epinephrine 1:1000 (Adrenalin) ",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Dose",
+                      "lineitems": [
+                        {
+                          "text": "Mix: 2mg/250mL D<sub>5</sub>W, NS = 8 mcg/mL"
+                        },
+                        {
+                          "text": "1-10mcg/min (average dose) Do not use if solution appears pink or brown or contains precipitate. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Therapeutic Effects",
+                      "lineitems": [
+                        {
+                          "text": "&#8593;CO"
+                        },
+                        {
+                          "text": "&#8593;HR"
+                        },
+                        {
+                          "text": "&#8593;SVR "
+                        },
+                        {
+                          "text": "Relaxes smooth muscle of the bronchial tree, produces cardiac stimulation."
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": " Excessive doses may cause acute hypertension, extreme hyperglycemia, ST segment depression indicative of myocardial ischemia and in creasing dysrhythmia. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "Monitor blood glucose levels because epinephrine causes insulin resistance."
+                        },
+                        {
+                          "text": "Start at low dose and titrate upward to desired BP &amp;/or HR response. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Inamrinone (Inocor) ",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Dose",
+                      "lineitems": [
+                        {
+                          "text": "May be given undiluted. Do NOT mix with solutions containing dextrose. "
+                        },
+                        {
+                          "text": "May mix 500mg(100 mL) Inamrinone in 100 mL NS = 2.5 mg/mL "
+                        },
+                        {
+                          "text": "Loading dose-0.75 mg/kg over 2-3 min. Maintenance infusion of 5-10 mcg/kg/min to max 10 mg/kg/day "
+                        },
+                        {
+                          "text": "Half life = 3-6hrs. "
+                        },
+                        {
+                          "text": "<b>Half life maybe increased with heart failure.</b>"
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Therapeutic Effects",
+                      "lineitems": [
+                        {
+                          "text": "&#8593;CO"
+                        },
+                        {
+                          "text": "&#8595;SVR"
+                        },
+                        {
+                          "text": "Phosphodiesterase inhibitor. Reduces preload and after load; increases cardiac output. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": "Dysrhythmia, hypotension, thrombocytopenia, nausea. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "Obtainbaseline,electrolytes, liver enzymes, BNP (to assess for heart failure), CBC including platelet count."
+                        },
+                        {
+                          "text": "Correctelectrolyteabnormali- tiespriortouse. Dehydrated patients are at increased risk for hypotension. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Milrinone (Primacor) ",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Dose",
+                      "lineitems": [
+                        {
+                          "text": "Mix:40mg(40mL) Milrinone/160 mL D<sub>5</sub>W, NS = 200 mcg/mL"
+                        },
+                        {
+                          "text": "Initial bolus of 50 mcg/kg over 10 min. Maintenance infusion of 0.375-0.75 mcg/kg/min to max daily dose of 0.59-1.13 mg/kg. "
+                        },
+                        {
+                          "text": "Reduce dose in patients with severe renal impairment to 0.2-0.43 mcg/kg/min. "
+                        },
+                        {
+                          "text": "Half life = 2.4hrs. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Therapeutic Effects",
+                      "lineitems": [
+                        {
+                          "text": "&#8593;CO"
+                        },
+                        {
+                          "text": "&#8593;SVR"
+                        },
+                        {
+                          "text": "Phosphodiesterase inhibitor. Relaxes vascular muscle, causing vasodilation. # Increases CO, decreases PAOP and vascular resistance. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": "Ventricular dysrhythmias, ventricular ectopy, supraventricular tachycardia, hypotension, diuresis, hypokalemia, headache. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "Obtain baseline, electrolytes, liver enzymes, renal function tests, BNP (to assess for heart failure). "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Norepinephrine (Levophed) ",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Dose",
+                      "lineitems": [
+                        {
+                          "text": "Mix: 4mg/250mL D<sub>5</sub>W = 16 mcg/mL "
+                        },
+                        {
+                          "text": "Start at 0.5 mcg/min. Usual dose is 2-12 mcg/min up to 30 mcg/min."
+                        },
+                        {
+                          "text": "Do not use if solution appears brown or contains precipitate. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Therapeutic Effects",
+                      "lineitems": [
+                        {
+                          "text": "&#8593;CO"
+                        },
+                        {
+                          "text": "&#8593;HR"
+                        },
+                        {
+                          "text": "&#8593;SVR "
+                        },
+                        {
+                          "text": "Increases systemic BP and coronary blood flow. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": "Hypertension, peripheral vasoconstriction, myocardial ischemia, dyspnea. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": " Tissue necrosis if infiltration occurs. If extravasation occurs, infiltrate affected area with 10-15 mL sterile saline containing 5-10 mg phentolamine. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Phenylephrine (Neo- synephrine) ",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Dose",
+                      "lineitems": [
+                        {
+                          "text": "Mix: 10mg/250 mL D<sub>5</sub>W, NS = 40 mcg/ml "
+                        },
+                        {
+                          "text": "Half life = 2.5 hrs. "
+                        },
+                        {
+                          "text": "Infuse at 100-180 mcg/min to max of 300 mcg/min "
+                        },
+                        {
+                          "text": "Do not use if solution appears brown or contains precipitate. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Therapeutic Effects",
+                      "lineitems": [
+                        {
+                          "text": "&#8593;HR"
+                        },
+                        {
+                          "text": "&#8593;SVR "
+                        },
+                        {
+                          "text": "Increases systolic BP. Decreases mucosal blood flow and relieves congestion. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": " Myocardialischemia, reflex bradycardia, mild CNS stimulation, tachycardia and palpitations with large dosages. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "Tissue necrosis if infiltration occurs. If extravasation occurs, infiltrate affected area with 10-15 mL sterile saline containing 5-10 mg phentolamine.    "
+                        },
+                        {
+                          "text": "Assess for continued hypotension; if present assess if additional IV fluids are needed. "
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Vasodilator Medications",
+              "card_title": "Cardiac Medication",
+              "meta": {
+                "renderer": "sectionsTemplate",
+                "list_style": "number",
+                "fixed_columns": [
+                  "Dose",
+                  "Therapeutic Effects",
+                  "Side Effects",
+                  "Critical Care Considerations"
+                ]
+              },
+              "sections": [
+                {
+                  "title": "Labetalol (Normodyne) ",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Dose",
+                      "lineitems": [
+                        {
+                          "text": "20-80 mg IV bolus every 10 min. then 1-2 mg/min infusion. Total dose 300 mg."
+                        },
+                        {
+                          "text": "Half life = 5.5hrs. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Therapeutic Effects",
+                      "lineitems": [
+                        {
+                          "text": "Slows sinus heart rate, decreases PVR, CO, and BP. "
+                        },
+                        {
+                          "text": "Moderate decrease of both preload and afterload. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": "Orthostatic hypotension, bronchospasm, AV block. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": " Lower BP gradually to avoid cerebral ischemia or infarct, optic nerve infarction, angina, myocardial ischemia or infarct."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Nesiritide (Natrecor) ",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Dose",
+                      "lineitems": [
+                        {
+                          "text": "1.5 mg/250 ml D<sub>5</sub>W, NS, = 6 mcg/mL "
+                        },
+                        {
+                          "text": "Loading dose : 2mcg/kg over 1 min. (take from infusion mix). "
+                        },
+                        {
+                          "text": "Infuse: 0.01 mcg/kg/min. At intervals of 3 hrs. or longer, may be increased by 0.005 mcg/kg/min (preceded by bolus of 1 mcg/kg), up to a maximum of 0.03 mcg/kg/min. "
+                        },
+                        {
+                          "text": "Half life = 18-23min."
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Therapeutic Effects",
+                      "lineitems": [
+                        {
+                          "text": "B-typenatriuretic peptide. "
+                        },
+                        {
+                          "text": "For use in acute decompensated heart failure. "
+                        },
+                        {
+                          "text": "Venousandarterial vasodilator."
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": "Dose-related hypotension "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "Discard mixture after 24hrs. Safety and efficacy for use longer than 48 hrs. has not been established. "
+                        },
+                        {
+                          "text": "Monitoring of PA pressuresand CI is helpful but not mandatory. "
+                        },
+                        {
+                          "text": "Establish parameters with all healthcare providers for adjusting the rate or stopping the infusion."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Nitroglycerin (Tridil)",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Dose",
+                      "lineitems": [
+                        {
+                          "text": "25 mg/250 mL, D<sub>5</sub>W = 100 mcg/mL "
+                        },
+                        {
+                          "text": "50 mg/250 mL D<sub>5</sub>W = 200 mcg/mL "
+                        },
+                        {
+                          "text": "Infusion rate - 5-300 mcg/min. Start infusion at 5 mcg/min and increase by 5 mcg/min every 5-10 min. "
+                        },
+                        {
+                          "text": "Half life = 1-4min. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Therapeutic Effects",
+                      "lineitems": [
+                        {
+                          "text": "Dilatescoronary arteries and improves collateral blood flow to ischemic areas within myocardium. IV form produces peripheral vasodilation. "
+                        },
+                        {
+                          "text": "Strong preload reduction, mild afterload reduction. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": "Hypovolemia, hypotension, bradycardia."
+                        },
+                        {
+                          "text": "Reflex tachycardia, headache, flushing. "
+                        },
+                        {
+                          "text": "Orthostatic hypotension. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "Must be mixed in glass bottle. Special tubing may be recom- mended to reduce absorption into PVC tubing. "
+                        },
+                        {
+                          "text": "To avoid irreversible hypotension, DO NOT administer nitrates within 24 hrs. of patient taking Cialis, Levitra or Viagra. "
+                        },
+                        {
+                          "text": "Nitroglycerin potentiates non-depolarizing neuromuscular blocking agents; may require dose reduction. "
+                        },
+                        {
+                          "text": "Used with alteplase reduces thrombolytic effect of alteplase."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Nitroprusside (Nipride, Nitropress)",
+                  "card_title": "Cardiac Medication",
+                  "meta": {
+                    "renderer": "titled_ul_with_caption"
+                  },
+                  "sections": [
+                    {
+                      "title": "Dose",
+                      "lineitems": [
+                        {
+                          "text": "Mix: 50 mg/250 mL D<sub>5</sub>W = 200 mcg/mL. "
+                        },
+                        {
+                          "text": "Cover with opaque material. Solution may have faint brown tint. Do not use if solution appears blue, green or dark red. "
+                        },
+                        {
+                          "text": "Once solution is prepared it must be used within 24 hrs. "
+                        },
+                        {
+                          "text": "Start at 0.1-5 mcg/kg/min. Titrate every 5-15 min. in increments of 0.5- 1 mcg/kg/min. Maximum dose 10 mcg/kg/min. "
+                        },
+                        {
+                          "text": "Half life < 10 min. "
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Therapeutic Effects",
+                      "lineitems": [
+                        {
+                          "text": "Potentvasodilator, acts directly on arterial and venous smooth muscle. "
+                        },
+                        {
+                          "text": "Decreases SVR; moderate preload reduction, strong afterload reduction."
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Side Effects",
+                      "lineitems": [
+                        {
+                          "text": " Hypotension, thiocynate toxicity, reflex tachycardia."
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Critical Care Considerations",
+                      "lineitems": [
+                        {
+                          "text": "Use cautiously in patients with hyponatremia, hypothyroidism or severe hepatic or renal impairment. "
+                        },
+                        {
+                          "text": "Thiocynatetoxicity - hypotension, confusion, tinnitus, hyperreflexia, headache, vomiting, seizures."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Bibliography",
+              "card_title": "Cardiac Medication",
+              "meta": {
+                "renderer": "untitledParagraphs"
+              },
+              "title": "Bibliography",
+              "lineitems": [
+                {
+                  "text": "Baird M. Mosby&#8217;s <i>Critical Care Drug Reference</i>. St Louis, MO: Elsevier; 2008."
+                },
+                {
+                  "text": "Carlson K, ed. <i>AACN Advanced Critical Care Nursing</i>. St Louis, MO: Elsevier; 2009."
+                },
+                {
+                  "text": "Urden LD, Stacy KM, Lough ME. <i>Thelan&#8217;s Critical Care Nursing: Diagnosis and Management</i>, 5th ed. St Louis, MO: Elsevier; 2006."
+                }
+              ]
+            }
+          ]
+        }
+    ]
+
+}
+
